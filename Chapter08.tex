@@ -84,6 +84,8 @@
 
 \section{Continuous Functions}
 
+% AC02 p. 33
+
 \begin{definition} 
 Let $(X; \rho)$ and $(Y; \eta)$ be two metric spaces, $f: X \ra Y$ and $x_0 \in X$.
 
@@ -92,17 +94,13 @@ $\bullet$ $f$ is \emph{continuous} at $x_0$ if $\forall \epsilon > 0 \ \exists \
 $\bullet$ $f$ is \emph{continuous} if $f$ is continuous at all $x_0 \in X$.
 \end{definition}
 
-
-
 \begin{remark}
-We may consider the "more general" setting $$f: D \ (\subseteq X) \ra Y, \ x_0 \in D.$$
+We may consider the "more general" setting \begin{equation*} f: D \ (\subseteq X) \ra Y, \ x_0 \in D. \end{equation*}
 
 $f$ is \emph{continuous} at $x_0$ if $\forall \epsilon > 0 \ \exists \delta > 0$ such that $\forall x \in D$, if $\rho(x, x_0) < \delta$ then $\eta(f(x), f(x_0) < \epsilon$. 
 
 But this is not more general than the definition since it coincides with the case when $D$ is considered as a metric space with the metric $\rho|_{D \times D}$.
 \end{remark}
-
-
 
 \begin{fact}
 Let $(X; \rho)$ and $(Y; \eta)$ be two metric spaces, $f: X \ra Y$ and $x_0 \in X$. TFAE:
@@ -113,9 +111,143 @@ Let $(X; \rho)$ and $(Y; \eta)$ be two metric spaces, $f: X \ra Y$ and $x_0 \in 
 \item[(iii)] $\forall U \in \cV(f(x_0)) \ \exists V \in \cV(x_0)$ such that $f(V) \subseteq U$.
 \item[(iv)] $\forall U$ open in Y such that $f(x_0) \in U$ $\exists V$ open in X such that $x_0 \in V$ and $f(V) \subseteq U$.
 \end{itemize}
+\end{fact}
 
 The last characterization shows that continuity is a topological concept.
+
+% AC02 p. 34
+
+\begin{definition}
+Let $(X; \cT)$ and $(Y; \mathcal{Y})$ be topological spaces. Let $f: X \ra Y$ be a function and $x_0 \in X$. 
+
+$f$ is \emph{continuous} at $x_0$ if $\forall U \in \mathcal{Y}$ such that $f(x_0) \in U$ $\exists V \in \cT$ such that $x_0 \in V$ and $f(V) \subseteq U$.
+
+\end{definition} 
+
+Continuity is related to the more general concept of limit.
+
+\begin{definition}
+Let $(X; \rho)$ and $(Y; \eta)$ be topological spaces, $D \subseteq X$. Let $f: D \ra Y$ be a function and $x_0 \in X, y_0 \in Y$. 
+
+$f$ \emph{has limit} $y_0$ \emph{at} $x_0$ if:
+
+$\bullet$ $x_0$ is an accumulation point for $D$
+
+$\bullet$ $\forall \epsilon > 0$ $\exists \delta > 0$ such that $\forall x \in D \setminus \{x_0\}$, if $\rho(x, x_0) < \delta$ then $\eta(f(x), y_0) < \epsilon$.
+
+\end{definition} 
+
+\begin{remark} 
+If $f$ has limit $y_0$ at $x_0$ then $y_0$ is unique, hence we can denote: \begin{equation*}\lim_{x \ra x_0} f(x) = y_0.\end{equation*}
+\end{remark}
+
+% p. 35
+
+\begin{fact} \
+\begin{itemize}
+\item[(1)] $f: D \left(\subseteq X\right) \ra Y$, metric spaces, $x_0 \in X$. % Domain of f labelled as X in notes, should be D for isolated pts. etc. to make sense
+    \begin{itemize}
+    \item[(i)] if $x_0$ is isolated in $D$ then $f$ is continuous at $x_0$
+    \item[(ii)] if $x_0$ is an accum. point for $D$ then $f$ is cont. at $x_0$ iff \begin{equation*}\lim_{x \ra x_0} f(x) = f(x_0).\end{equation*}
+    \end{itemize}
+\item[(2)] % crossed out
+\item[(3)] $f: D \ra Y$ function, $x_0 \in D$ accumulation point and $y_0 \in Y$. Then
+    \begin{align}
+    \lim_{x \ra x_0} f(x) = y_0 \ \Lra \ \nonumber
+    & \forall (x_n)_{n \geq 1} \textit{ with all } x_n \in D \\ \nonumber
+    & \textit{and } x_n \neq x_0 \ \forall n \\ \nonumber
+    & \textit{and } \lim_{n \ra \infty} x_n = x_0 \\ \nonumber
+    & \textit{we have } \lim_{n \ra \infty} f(x_n) = y_0.
+    \end{align}
+    \end{itemize}
+    
+    \begin{proof}
+    
+    \begin{itemize}
+    \item["$\Ra$"] $\forall \epsilon > 0$ $\exists \delta > 0$ such that $\forall x \in D \setminus \{x_0\}$, if $\rho(x, x_0) < \delta$ then $\eta(f(x), y_0) < \epsilon$.
+    
+    Take $(x_n)_{n \geq 1}$ a sequence in $X$, $x_n \neq x_0 \ \forall n$ and $\lim_{n \ra \infty} x_n = x_0$.
+    
+    Then $\exists N_\delta \in \NN$ such that $\forall n \in \NN$, if $n \geq N_\delta$ then $\rho(x_n, x_0) < \delta$ hence: $\eta(f(x_n), y_0) < \epsilon$.
+    
+    % p. 36
+    
+    \item["$\La$"] Assume that $\forall (x_n)_{n \geq 1}$ seq. with all elements in $D$ such that $x_n \neq x_0 \ \forall n \in \NN$
+    and $\lim_{n \ra \infty} x_n = x_0$ we have $\lim_{n \ra \infty} f(x_n) = y_0$.
+    
+    By contradiction assume that $f(x)$ does not converge to $y_0$ as $x$ approaches $x_0$. 
+    
+    Then $\exists \epsilon_0 > 0$ such that $\forall \delta > 0$ $\exists x \in D \setminus \{x_0\}$ with $\rho(x, x_0) < \delta$ and $\eta(f(x), y_0) \geq \epsilon_0$.
+    
+    $\forall n \in \NN$, take $\delta = \frac{1}{n} > 0$ hence $\exists x_n \in D \setminus \{x_0\}$ with $\rho(x_n, x_0) < \delta = \frac{1}{n}$ and $\eta(f(x_n), y_0) \geq \epsilon_0$
+    
+    hence $x_n \xrightarrow[n \ra \infty]{\rho} x_0$ but $f(x_n) \not\xrightarrow[n \ra \infty]{\eta} y_0$. % how to cross out arrow better?
+    \end{itemize}
+    \end{proof}
+
+\item[(4)] (Sequential Characterization of Continuity) Let $f: X \ra Y$ function and $x_0 \in X$. 
+\begin{align}
+\textit{Then } f \textit{ is continuous at } x_0 \Lra \ \nonumber
+& \forall (x_n)_{n \geq 1} \textit{ seq. in } X \\ \nonumber
+& \textit{such that } x_n \xrightarrow[n]{\rho} x_0 \\ \nonumber
+& \textit{we have } f(x_n) \xrightarrow[n]{\eta} y_0 .
+\end{align}
+
+% p. 37
+
+\item[(5)] (Composition of Functions) Let $\underset{\rho}X \overset{f}\ra \underset{\eta}Y \overset{g}\ra \underset{\theta}Z$ functions between metric spaces.
+    \begin{itemize}
+    \item[(i)] % crossed out
+    \item[(ii)] \begin{align}
+    \textit{Assume that } \nonumber
+    & x_0 \in X \\ \nonumber
+    & f \textit{ is cont. at } x_0 \\ \nonumber
+    & g \textit{ is cont. at } f(x_0)
+    \end{align}
+    Then $g \circ f$ is continuous at $x_0$.
+    \end{itemize}
+
+\item[(6)] (Functions Between Euclidean Spaces) Let $D \subseteq \RR^p$ and $f: D \ra \RR^q$ be a function, hence $f(x) = \left(f_1(x), \ldots, f_q(x)\right)$, $\forall x \in D$ where  $f_j : D \ra \RR$ function $\forall j = 1, \ldots, q$.
+    \begin{itemize}
+    \item[(i)] Let $x_0 \in D^\prime$, i.e. $x_0$ is an accumulation point for $D$ and \\ $y^{(0)} = \left(y^{(0)}_1, \ldots, y^{(0)}_q\right) \in \RR^q$. Then
+    \begin{equation*}
+    \lim_{x \ra x_0} f(x) = y^{(0)} \Lra \ \forall j = 1, \ldots, q \  \lim_{x \ra x_0} f_j(x) = y^{(0)}_j.
+    \end{equation*}
+    % p. 38
+    \item[(ii)] Let $x_0 \in D$. Then
+    \begin{equation*}
+    f \textit{ is cont. at } x_0 \Lra \ \forall j = 1, \ldots, q \ , f_j \textit{ is cont. at } x_0.
+    \end{equation*}
+    \end{itemize}
+    
+    \begin{proof} \
+    \begin{itemize}
+    \item[(i)] \
+    	\begin{itemize}
+	\item["$\Ra$".] Assume that $\lim_{x \ra x_0} f(x) = y^{(0)}$ and use the $\|\cdot\|_\infty$.
+	
+	$\forall \epsilon > 0 \ \exists \delta > 0$ such that $\forall x \in D \setminus \{x_0\}$, if $\|x - x_0\| < \delta$ then $\|f(x) - y^{(0)}\|_\infty < \epsilon$.
+	
+	Let $j \in \{1, \ldots, q\}$, then \begin{equation*} |f_j(x) - y^{(0)}_j| \leq \|f(x) - y^{(0)}\|_\infty < \epsilon. \end{equation*}
+	
+	\item["$\La$".] Assume that $\forall j = 1, \ldots, q$ \begin{equation*} \lim_{x \ra x_0} f_j(x) = y^{(0)}_j. \end{equation*}
+	
+	Then $\forall \epsilon > 0$ $\exists \delta_j > 0$ such that $\forall x \in D \setminus \{x_0\}$, if $\|x-x_0\|_\infty < \delta_j$ then $|f_j(x) - y^{(0)}_j| < \epsilon$. 
+	
+	Take $\delta := \min\{\delta_1, \ldots, \delta_q\} > 0$.
+	
+	Then $\forall j = 1, \ldots, q$, if $\|x-x_0\|_\infty < \delta \leq \delta_j$ then $|f_j(x) - y^{(0)}_j| < \epsilon$ hence \begin{equation*} \|f(x) - y^{(0)}\|_\infty = \max_{j=1}^q \{|f_j(x) - y^{(0)}_j|\} < \epsilon. \end{equation*}
+	\end{itemize}
+    \item[(ii)]
+    $\bullet$ if $x_0$ isolated, nothing to prove.
+    
+    $\bullet$ if $x_0$ accum. point for D, we use (i). % align these later
+    \end{itemize}
+    \end{proof}
+
 \end{fact}
+
+% p. 39
 
 \section{Continuity and Topology}
 %% AC03 pp. 43-44
