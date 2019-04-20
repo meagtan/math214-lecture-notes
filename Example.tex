@@ -1,0 +1,170 @@
+%%% Advanced Calculus
+%%% An example file
+%%% 
+%%% 2019/02/16
+%%% 
+\documentclass[12pt]{amsbook}
+\usepackage[mathscr]{eucal}
+\usepackage{amsmath,amsfonts}
+\usepackage{amsthm}
+
+%%% Set the parskip
+\parskip=\smallskipamount
+%%% Set the page dimensions
+\hoffset -1.5cm \voffset -1cm \textwidth 15.5truecm
+\textheight21.5truecm
+%%% Define theorems and the like
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+%%% Define definitions and the like
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+%%% The following paragraph writes the equation numbers with two counters,
+%%% the first is the section number and the second resets within the section.
+
+\makeatletter
+\@addtoreset{equation}{section}
+\makeatother
+\renewcommand\theequation{\arabic{section}.\arabic{equation}}
+
+%%% The following paragraph sets macros for mathematical bold letters
+
+\newcommand{\CC}{{\mathbb C}}
+\newcommand{\NN}{{\mathbb N}}
+\newcommand{\QQ}{{\mathbb Q}}
+\newcommand{\ZZ}{{\mathbb Z}}
+\newcommand{\DD}{{\mathbb D}}
+\newcommand{\RR}{{\mathbb R}}
+
+%%% The following paragraph sets macros for mathematical caligraphic letters
+
+
+\newcommand{\cA}{{\mathcal A}}
+\newcommand{\cB}{{\mathcal B}}
+\newcommand{\cC}{{\mathcal C}}
+\newcommand{\cD}{{\mathcal D}}
+\newcommand{\cE}{{\mathcal E}}
+\newcommand{\cF}{{\mathcal F}}
+\newcommand{\cG}{{\mathcal G}}
+\newcommand{\cH}{{\mathcal H}}
+\newcommand{\cJ}{{\mathcal J}}
+\newcommand{\cK}{{\mathcal K}}
+\newcommand{\cL}{{\mathcal L}}
+\newcommand{\cM}{{\mathcal M}}
+\newcommand{\cN}{{\mathcal N}}
+\newcommand{\cP}{{\mathcal P}}
+\newcommand{\cR}{{\mathcal R}}
+\newcommand{\cS}{{\mathcal S}}
+\newcommand{\cT}{{\mathcal T}}
+\newcommand{\cU}{{\mathcal U}}
+\newcommand{\cV}{{\mathcal V}}
+\newcommand{\cW}{{\mathcal W}}
+\newcommand{\cZ}{{\mathcal Z}}
+
+%%% Some macros
+
+\newcommand{\Ra}{\Rightarrow} % Double right arrow, for implications
+\newcommand{\La}{\Leftarrow} % Double left arrow, for implications
+\newcommand{\Lra}{\Leftrightarrow} % Double equivalence sign
+\newcommand{\ran}{\mathrm{Ran}} % Range
+\newcommand{\ra}{\rightarrow} % Simple right arrow
+\newcommand{\ol}{\overline} % Line over symbols
+\newcommand{\hra}{\hookrightarrow} % Hooked right arrow
+\newcommand{\de}{\mathrm{d}} % For differentials, integrals, etc.
+
+%%% The beginning of the document
+\begin{document}
+
+\chapter{This is the Title of the Chapter}
+
+\section{This is the Title of the Section}
+
+
+\begin{theorem} This is a theorem.
+\end{theorem}
+
+\begin{proof}
+This is a proof. Sometimes a proof is divided in steps, which in the
+manuscript are indicated by bullets.
+
+$\bullet$ \emph{Here is the statement that we want to prove as the first
+  step. Note that it is written in italics by using the emphasizing
+  environment.}
+
+Now the argument for the first step follows.
+
+$\bullet$ \emph{Here is the statement that we want to prove as the second
+  step. It is also written in italics by using the emphasizing
+  environment.}
+
+Now the argument for the second step follows. 
+
+Sometimes we need displayed formulas, as follows:
+\begin{equation*}
+f(t)=\begin{cases} t, & \mbox{ if }t>0,\\ -t, & \mbox{ if }t\leq 0.
+\end{cases}
+\end{equation*}
+
+If there is a chain of displayed formulas, use the following environment
+\begin{align*}
+f(t) & = \frac{1}{1+t^2}+\int_0^t g(s)\de s+ \frac{\de f}{\de t} \\
+& = \frac{1}{1+t^2}+ \log(1+t^2)\exp(2\pi t)+ \frac{\de f}{\de t}.
+\end{align*}
+You may observe how the $\de f$, the symbol for differential, is used by using
+the provided macro. 
+
+If there is a matrix you can do it in the following way:
+\begin{equation*}
+A=\left[\begin{matrix} 1 & 2 \\ 1 & 3 \end{matrix}\right].
+\end{equation*}
+
+Note the square that indicates the end of a proof.
+\end{proof}
+
+\begin{definition} This is a definition. Note that it appears in roman
+  letters. Only the \emph{defined term} should be emphasized (in the
+  manuscript it is underlined).
+\end{definition}
+
+\subsection{This is a subsection}
+
+\begin{fact} This is a fact, something that I did not decide whether to be a
+  theorem, proposition, or something else. Sometimes, we need to have a list
+  of
+conditions, that we can do as follows:
+\begin{itemize}
+\item[(i)] First condition.
+\item[(ii)] Second condition.
+\end{itemize}
+\end{fact}
+
+\begin{proof} Here comes the proof of the Fact. If the corresponding fact does
+  not have a proof, this part is not used at all.
+
+In case a displayed formula has to be cited, you may use labels and numbered
+equations:
+\begin{equation}\label{e:mylabel} f(t)=f(t+1),\quad\mbox{ for all }t\in\RR.
+\end{equation}
+Then you can use the label to cite it as \eqref{e:mylabel}.
+
+In case there is a chain of equations, and only some of them have to be
+labelled, you do like that
+\begin{align}
+f(t) & = \frac{1}{1+t^2}+\int_0^t g(s)\de s+ \frac{\de f}{\de t} \nonumber \\
+& = \frac{1}{1+t^2}+ \log(1+t^2)\exp(2\pi t)+ \frac{\de f}{\de
+  t}.\label{e:label} 
+\end{align}
+
+In case a proof ends with a displayed formula, you should indicate the place
+of the square that marks the end of the proof:
+\begin{equation*}
+f(t) =g (t).\qedhere
+\end{equation*}
+\end{proof}
+\end{document}

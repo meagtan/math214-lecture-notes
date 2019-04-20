@@ -1,0 +1,138 @@
+%%% Advanced Calculus
+%%% Chapter 8: Continuous Functions in Euclidean Spaces
+%%% Manuscript pages 33-60
+%%% Spring 2019
+%%% Typeset by Ecem Ilgun and Ata Deniz Aydin
+\documentclass[12pt]{amsbook}
+\usepackage[mathscr]{eucal}
+\usepackage{amsmath,amsfonts}
+
+%%% Set the parskip
+\parskip=\smallskipamount
+%%% Set the page dimensions
+\hoffset -1.5cm \voffset -1cm \textwidth 15.5truecm
+\textheight21.5truecm
+%%% Define theorems and the like
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+%%% Define definitions the like
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+%%% The following paragraph writes the equation numbers with two counters,
+%%% the first is the section number and the second resets within the section.
+
+\makeatletter
+\@addtoreset{equation}{section}
+\makeatother
+\renewcommand\theequation{\arabic{section}.\arabic{equation}}
+
+%%% The following paragraph sets macros for mathematical bold letters
+
+\newcommand{\CC}{{\mathbb C}}
+\newcommand{\NN}{{\mathbb N}}
+\newcommand{\QQ}{{\mathbb Q}}
+\newcommand{\ZZ}{{\mathbb Z}}
+\newcommand{\DD}{{\mathbb D}}
+\newcommand{\RR}{{\mathbb R}}
+
+%%% The following paragraph sets macros for mathematical caligraphic letters
+
+
+\newcommand{\cA}{{\mathcal A}}
+\newcommand{\cB}{{\mathcal B}}
+\newcommand{\cC}{{\mathcal C}}
+\newcommand{\cD}{{\mathcal D}}
+\newcommand{\cE}{{\mathcal E}}
+\newcommand{\cF}{{\mathcal F}}
+\newcommand{\cG}{{\mathcal G}}
+\newcommand{\cH}{{\mathcal H}}
+\newcommand{\cJ}{{\mathcal J}}
+\newcommand{\cK}{{\mathcal K}}
+\newcommand{\cL}{{\mathcal L}}
+\newcommand{\cM}{{\mathcal M}}
+\newcommand{\cN}{{\mathcal N}}
+\newcommand{\cP}{{\mathcal P}}
+\newcommand{\cR}{{\mathcal R}}
+\newcommand{\cS}{{\mathcal S}}
+\newcommand{\cT}{{\mathcal T}}
+\newcommand{\cU}{{\mathcal U}}
+\newcommand{\cV}{{\mathcal V}}
+\newcommand{\cW}{{\mathcal W}}
+\newcommand{\cZ}{{\mathcal Z}}
+
+%%% Some macros
+
+\newcommand{\Ra}{\Rightarrow} % Double right arrow, for implications
+\newcommand{\La}{\Leftarrow} % Double left arrow, for implications
+\newcommand{\Lra}{\Leftrightarrow} % Double equivalence sign
+\newcommand{\ran}{\mathrm{Ran}} % Range
+\newcommand{\ra}{\rightarrow} % Simple right arrow
+\newcommand{\ol}{\overline} % Line over symbols
+\newcommand{\hra}{\hookrightarrow} % Hooked right arrow
+\newcommand{\de}{\mathrm{d}} % For differentials, integrals, etc.
+
+%%% The beginning of the document
+\begin{document}
+
+\chapter{Continuous Functions in Euclidean Spaces}
+%% AC02-3 pp. 33-42
+
+\section{Continuous Functions}
+
+\begin{definition} 
+Let $(X; \rho)$ and $(Y; \eta)$ be two metric spaces, $f: X \ra Y$ and $x_0 \in X$.
+
+$\bullet$ $f$ is \emph{continuous} at $x_0$ if $\forall \epsilon > 0 \ \exists \delta > 0$ such that $\forall x \in X$, if $\rho(x, x_0) < \delta$ then $\eta(f(x), f(x_0) < \epsilon$
+
+$\bullet$ $f$ is \emph{continuous} if $f$ is continuous at all $x_0 \in X$.
+\end{definition}
+
+
+
+\begin{remark}
+We may consider the "more general" setting $$f: D \ (\subseteq X) \ra Y, \ x_0 \in D.$$
+
+$f$ is \emph{continuous} at $x_0$ if $\forall \epsilon > 0 \ \exists \delta > 0$ such that $\forall x \in D$, if $\rho(x, x_0) < \delta$ then $\eta(f(x), f(x_0) < \epsilon$. 
+
+But this is not more general than the definition since it coincides with the case when $D$ is considered as a metric space with the metric $\rho|_{D \times D}$.
+\end{remark}
+
+
+
+\begin{fact}
+Let $(X; \rho)$ and $(Y; \eta)$ be two metric spaces, $f: X \ra Y$ and $x_0 \in X$. TFAE:
+
+\begin{itemize}
+\item[(i)] $f$ is continuous at $x_0$
+\item[(ii)] $\forall \epsilon > 0 \ \exists \delta > 0$ such that $f(B_\delta(x_0)) \subseteq B_\epsilon(f(x_0))$
+\item[(iii)] $\forall U \in \cV(f(x_0)) \ \exists V \in \cV(x_0)$ such that $f(V) \subseteq U$.
+\item[(iv)] $\forall U$ open in Y such that $f(x_0) \in U$ $\exists V$ open in X such that $x_0 \in V$ and $f(V) \subseteq U$.
+\end{itemize}
+
+The last characterization shows that continuity is a topological concept.
+\end{fact}
+
+\section{Continuity and Topology}
+%% AC03 pp. 43-44
+
+\section{Continuity and Compactness}
+%% AC03 pp. 45-46
+
+\section{Continuity and Connectedness}
+%% AC03 pp. 47-50
+
+\section{Uniform Continuity}
+%% AC03 pp. 51-54
+
+\section{Sequences of Functions}
+%% AC03 pp. 55-59
+
+\section{Series of Functions}
+%% AC03 p. 60
+
+\end{document}
