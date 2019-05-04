@@ -238,6 +238,7 @@ If $f$ has limit $y_0$ at $x_0$ then $y_0$ is unique, hence we can denote: \begi
 	
 	Then $\forall j = 1, \ldots, q$, if $\|x-x_0\|_\infty < \delta \leq \delta_j$ then $|f_j(x) - y^{(0)}_j| < \epsilon$ hence \begin{equation*} \|f(x) - y^{(0)}\|_\infty = \max_{j=1}^q \{|f_j(x) - y^{(0)}_j|\} < \epsilon. \end{equation*}
 	\end{itemize}
+	
     \item[(ii)]
     $\bullet$ if $x_0$ isolated, nothing to prove.
     
@@ -248,6 +249,73 @@ If $f$ has limit $y_0$ at $x_0$ then $y_0$ is unique, hence we can denote: \begi
 \end{fact}
 
 % p. 39
+
+\begin{example}
+\begin{itemize}
+\item[(1)] $f: \RR^2 \ra \RR$
+\begin{equation*}
+f(x,y) =\left\{\begin{array}{ll} \frac{xy}{x^2+y^2}, & (x,y) \neq (0,0) \\ 0, & (x,y) = (0,0) \end{array} \right.
+\end{equation*}
+
+$\bullet$ $f$ continuous on $\RR^2 \setminus \left\{(0,0)\right\}$
+
+$\bullet$  $(0,0)$ is an accum. point for $\RR^2$
+
+and $f$ does not have a limit $(x,y) \ra (0,0)$
+
+\begin{align} \nonumber
+x = 0, \ y \ra 0 \Ra & f(0,y) = 0 \ra 0 \\ \nonumber
+y = 0, \ x \ra 0 \Ra & f(x,0) = 0 \ra 0 \\ \nonumber
+x = y \ra 0 \Ra & f(x,y) = \frac{1}{2} \ra \frac{1}{2}
+\end{align}
+
+\item[(2)] $f: \RR^2 \ra \RR$
+\begin{equation*}
+f(x,y) =\left\{\begin{array}{ll} \frac{xy}{\sqrt{x^2+y^2}}, & (x,y) \neq (0,0) \\ 0, & (x,y) = (0,0) \end{array} \right.
+\end{equation*}
+
+$\bullet$ $f$ continuous on $\RR^2$
+
+$\bullet$ at $(x_0, y_0) \neq (0,0)$, clear
+
+$\bullet$ at $(0,0)$
+
+\begin{equation*}
+|f(x,y)| = \frac{|xy|}{\sqrt{x^2+y^2}} \leq \frac{\sqrt{x^2+y^2}}{2} = \frac{\|(x,y)\|_2}{2}
+\end{equation*}
+
+\end{itemize}
+\end{example}
+
+% p. 40
+
+\begin{definition}
+$\bullet$ A \emph{curve} in $\RR^2$ is a continuous function $\gamma: I \ra \RR^q, q \geq 1$ where $I$ is an interval.
+
+$\bullet$ If the interval $I = [a, b]$ is compact, then the curve has \emph{endpoints} $x = \gamma(a)$ and $y = \gamma(b)$. In this case we say that $\gamma$ is a \emph{path} joining $x$ and $y$.
+
+$\bullet$ A curve with endpoints $x$ and $y$ is called \emph{closed} if $x = y$.
+\end{definition}
+
+\begin{example}
+\begin{itemize}
+\item[(1)] $\gamma(t) = \left(\cos t, \sin t\right), \gamma: [0, 2\pi] \ra \RR^2$
+
+$\gamma(0) = \gamma(2\pi)$ so $\gamma$ is a closed curve.
+
+% plot unit circle
+
+\item[(2)] $\gamma(t) = \left(t^2, t^3 \right), \gamma: [0, 1] \ra \RR^2$
+
+$\gamma(0) = (0,0)$  $\gamma(1) = (1,1)$ a curve with endpoints but not closed.
+
+% plot curve
+
+\item[(3)] $\gamma(t) = \left(t \cos t, t \sin t, t \right), \gamma: \RR \ra \RR^3$
+
+is a curve with no endpoints.
+\end{itemize}
+\end{example}
 
 \section{Continuity and Topology}
 %% AC03 pp. 43-44
