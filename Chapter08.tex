@@ -352,6 +352,59 @@ $D$ open, nonempty in $\RR^2$, $D \subseteq A \subseteq \bar D$.
 \section{Continuity and Topology}
 %% AC03 pp. 43-44
 
+\begin{theorem} (\emph{Topological Characterization of Continuity})
+
+Let $(X; \rho)$, $(Y; \eta)$ be metric spaces. $f: X \ra Y$ a function. TFAE:
+\begin{itemize}
+\item[(i)] $f$ is continuous.
+\item[(ii)] For all $U$ open in $Y$, $f^{-1}(U)$ is open in $X$.
+\item[(iii)] For all $F$ closed in $Y$, $f^{-1}(F)$ is closed in $X$.
+\end{itemize}
+\end{theorem}
+
+\begin{proof} \
+\begin{itemize} 
+\item[(i) $\Ra$ (ii).] Let $U$ open in $Y$ and $x \in f^{-1}(U)$, i.e. $f(x) \in U$. 
+
+Then $\exists \epsilon > 0$ s.t. $B_\epsilon(f(x)) \subseteq U$. 
+
+Since $f$ is cont. at $x$ $\exists \delta > 0$ s.t. $f(B_\delta(x)) \subseteq B_\epsilon(f(x)) \subseteq U$
+
+hence $B_\delta(x) \subseteq f^{-1}(B_\epsilon(f(x))) \subseteq f^{-1}(U)$, i.e. $f^{-1}(U)$ is open.
+
+\item[(ii) $\Ra$ (i).] Let $x \in X$ and $\epsilon > 0$. Then $B_\epsilon(f(x))$ is open in $Y$ 
+
+hence $f^{-1}(B_\epsilon(f(x)))$ is open in $X$.
+
+Since $x \in f^{-1}(B_\epsilon(f(x)))$ it follows that $\exists \delta > 0$ 
+
+s.t. $B_\delta(x) \subseteq f^{-1}(B_\epsilon(f(x)))$, i.e. $f(B_\delta(x)) \subseteq B_\epsilon(f(x))$.
+
+Hence $f$ is cont. at each $x \in X$.
+\item[(ii) $\Lra$ (iii).] Since $f^{-1}(Y \setminus A) = f^{-1}(Y) \setminus f^{-1}(A) = X \setminus f^{-1}(A)$.
+\end{itemize}
+\end{proof}
+
+\begin{corollary} 
+
+Let $\emptyset \neq D \subseteq \RR^p$, $f: D \ra \RR^q$ a function. TFAE:
+\begin{itemize}
+\item[(i)] $f$ is continuous.
+\item[(ii)] For all $U$ open in $\RR^q$, $f^{-1}(U)$ is relatively open in $D$.
+\item[(iii)] For all $F$ closed in $\RR^q$, $f^{-1}(F)$ is relatively closed in $D$.
+\end{itemize}
+\end{corollary}
+
+\begin{corollary} 
+
+Let $\emptyset \neq D \subseteq \RR^p$ open, $f: D \ra \RR^q$ a function. TFAE:
+\begin{itemize}
+\item[(i)] $f$ is continuous.
+\item[(ii)] For all $U$ open in $\RR^q$, $f^{-1}(U)$ is open in $\RR^p$.
+\item[(iii)] For all $F$ closed in $\RR^q$, $f^{-1}(F)$ is closed in $\RR^p$.
+\end{itemize}
+\end{corollary}
+
 \section{Continuity and Compactness}
 %% AC03 pp. 45-46
 
