@@ -385,6 +385,8 @@ Hence $f$ is cont. at each $x \in X$.
 \end{itemize}
 \end{proof}
 
+% p. 44
+
 \begin{corollary} 
 
 Let $\emptyset \neq D \subseteq \RR^p$, $f: D \ra \RR^q$ a function. TFAE:
@@ -407,6 +409,61 @@ Let $\emptyset \neq D \subseteq \RR^p$ open, $f: D \ra \RR^q$ a function. TFAE:
 
 \section{Continuity and Compactness}
 %% AC03 pp. 45-46
+
+\begin{theorem} 
+Let $(X; \rho)$, $(Y; \eta)$ be metric spaces, $f: X \ra Y$ a continuous function and $K$ compact in X. Then $f(K)$ is compact.
+\end{theorem}
+\begin{proof}
+
+Let $\{U_i | i \in \cJ\}$ be an open (in Y) covering of $f(K)$: 
+\begin{align*}
+\bullet \ & \forall i \in \cJ, U_i \textup{ is open in Y; } \\
+\bullet \ & f(K) \subseteq \bigcup_{i \in \cJ} U_i.
+\end{align*}
+
+Then $\forall i \in \cJ$, $f^{-1}(U_i)$ is open in X and
+\begin{equation*}
+K \subseteq f^{-1}(f(K)) \subseteq f^{-1}(\bigcup_{i \in \cJ} U_i) =  \bigcup_{i \in \cJ} f^{-1}(U_i)
+\end{equation*}
+hence $\{f^{-1}(U_i) | i \in \cJ\}$ is an open covering of $K$.
+
+Since $K$ is compact $\exists i_1, \ldots, i_n \in \cJ$ such that
+\begin{equation*}
+K \subseteq  \bigcup_{k=1}^n f^{-1}(U_{i_k}) = f^{-1}(\bigcup_{k=1}^n U_{i_k})
+\end{equation*}
+hence $f(K) \subseteq f(f^{-1}(\bigcup_{k=1}^n U_{i_k})) \subseteq \bigcup_{k=1}^n U_{i_k}$.
+\end{proof}
+
+\begin{corollary}
+Let $f: X \ra \RR$ a continuous function and $K$ compact, nonempty in $X$. Then:
+
+$\bullet$ $f$ is bounded on $K$, i.e. $f(K)$ is bounded in $\RR$.
+
+$\bullet$ The extreme values of $f$ on $K$ are attained, i.e. $\exists x_m, x_M \in K$ such that 
+\begin{equation*} f(x_m) = \inf_K f, \ f(x_M) = \sup_K f.\end{equation*}
+\end{corollary}
+
+% p. 46
+
+\begin{proof}
+$f(K)$ is compact in $\RR$, hence closed and bounded.
+
+$\bullet$ $f(K)$ bounded $\Ra$ $\inf_K f, \sup_K f \in \RR$.
+
+$\bullet$ $\inf_K f \in_! \bar{f(K)} = f(K)$, hence $\exists x_m \in K$ such that $\inf_K f = f(x_m)$. 
+
+$\bullet$ $\sup_K f \in \bar{f(K)} = f(K)$, hence $\exists x_M \in K$ such that $\sup_K f = f(x_M)$. 
+\end{proof}
+
+\begin{corollary}
+Let $f: X \ra \RR^q$ a continuous function. Then for all $K$ nonempty and compact in $X$ $\exists x_m, x_M \in K$ such that 
+\begin{equation*} \|f(x_m)\| = \inf_K \|f\|, \ \|f(x_M)\| = \sup_K \|f\|.\end{equation*}
+\end{corollary}
+
+\begin{proof}
+% TODO draw diagram with TikZ
+\begin{equation*} \|f\| = \|\cdot\| \circ f : X \ra \RR^q \ra \RR. \end{equation*}
+\end{proof}
 
 \section{Continuity and Connectedness}
 %% AC03 pp. 47-50
