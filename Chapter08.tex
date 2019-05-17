@@ -468,6 +468,85 @@ Let $f: X \ra \RR^q$ a continuous function. Then for all $K$ nonempty and compac
 \section{Continuity and Connectedness}
 %% AC03 pp. 47-50
 
+\begin{theorem}
+Let $(X; \rho)$, $(Y; \eta)$ be metric spaces, $f: X \ra Y$ a continuous function, $C$ connected in X. Then $f(C)$ is connected in Y.
+\end{theorem}
+
+\begin{proof}
+By contrapositive, assume that f(C) is separated, hence: there exist $U$, $V$ open in $Y$ such that
+\begin{align*}
+\bullet \ & f(C) \subseteq U \cup V \\
+\bullet \ & f(C) \cap U \neq \emptyset \\
+\bullet \ & f(C) \cap V \neq \emptyset \\
+\bullet \ & f(C) \cap U \cap V = \emptyset \\
+\end{align*}
+Then $f^{-1}(U)$, $f^{-1}(V)$ are open in X.
+\begin{align*}
+\bullet \ & C \subseteq f^{-1}(f(C)) \subseteq f^{-1}(U \cup V) = f^{-1}(U) \cup f^{-1}(V) \\
+\bullet \ & \emptyset \neq f^{-1}(f(C) \cap U) = f^{-1}(f(C)) \cap f^{-1}(U) \\
+\end{align*}
+
+\begin{itemize}
+\item[$\bullet$]
+We prove $C \cap f^{-1}(U) \neq \emptyset$.
+
+Since $f(C) \cap U \neq \emptyset$, $\exists y \in f(C)$ and $y \in U$ hence $\exists x \in C$ such that $f(x) \in U$, hence $x \in f^{-1}(U)$, i.e. $x \in C \cap f^{-1}(U)$.
+
+\item[$\bullet$] Similarly $C \cap f^{-1}(V) \neq \emptyset$.
+
+\item[$\bullet$] Similarly $C \cap f^{-1}(U) \cap f^{-1}(V) = \emptyset$
+
+% p. 48
+
+Assume $C \cap f^{-1}(U) \cap f^{-1}(V) \neq \emptyset$, then $\exists x \in C$ such that $x \in  f^{-1}(U) \cap f^{-1}(V)$ hence $f(x) \in f(C)$ and $f(x) \in f(f^{-1}(U)) \subseteq U$, $f(x) \in f(f^{-1}(V)) \subseteq V$ i.e. $f(x) \in  f(C) \cap U \cap V$, contradiction!
+\end{itemize}
+
+Thus, $f^{-1}(U)$ and $f^{-1}(V)$ separate C, contradiction!
+\end{proof}
+
+\begin{corollary} % Consequences
+\begin{itemize}
+\item[(1)] Let $f: (X; \rho) \ra \RR$ continuous, $C$ connected in $X$. Then $f(C)$ is an interval.
+\item[(2)] Let $I$ be an interval in $\RR$ and $\gamma: I \ra \RR^d$ continuous (a curve). Then $\gamma(I)$ is connected.
+
+\begin{definition}
+A subset $S \subseteq (X; \rho)$ is called \emph{pathwise connected} if for all $a, b \in S$ there exists a (continuous) path $\gamma: [0,1] \ra S$ such that $a = \gamma(0)$ and $b = \gamma(1)$.
+\end{definition}
+
+\item[(3)] If $S$ is pathwise connected, then it is connected.
+
+\begin{proof}
+Assume $S$ is not connected, let $U$, $V$ open in $X$ and separating $S$. Then there exist $a \in S \cap U$ and $b \in S \cap V$.
+% p. 49
+Since S is pathwise connected, there exists $\gamma: [0,1] \ra S$ continuous such that $\gamma(0) = a$ and $\gamma(1) = b$. But then $U$ and $V$ separate $\gamma([0,1])$, contradiction!
+\end{proof}
+
+\begin{example}
+A set in $\RR^2$ that is connected but not pathwise connected.
+\begin{equation*}
+S = \{(0,y) | -1 \leq y \leq 1 \} \cap \{ (x, \sin \frac{1}{x}) | -\frac{1}{\pi} < x < \frac{1}{\pi}, x \neq 0 \} % not sure about 1/pi
+\end{equation*}
+% missing: graph of set
+\end{example}
+
+\item[(4)] Assume that $D$ is open in $\RR^d$. Then $D$ is connected iff $D$ is pathwise connected.
+
+\begin{proof}
+
+\begin{itemize}
+\item[$\La$] Holds in general.
+\item[$\Ra$] On $D$ we define a relation: $x \stackrel{p}\sim y$ if $\exists \gamma: [0,1] \ra D$ continuous such that $\gamma(0) = x$ and $\gamma(1) = y$.
+\begin{itemize}
+\item[$\bullet$] $\stackrel{p}\sim$ is an equivalence relation on $D$.
+%p. 50
+\item[$\bullet$] $\forall x \in D$ its equivalence class $[x]_p$ is an open set.
+\item[$\bullet$] If $D$ is not pathwise connected then there exist at least two different cosets w.r.t. $\stackrel{p}\sim$, hence $D$ is disconnected.
+\end{itemize}
+\end{itemize}
+\end{proof}
+\end{itemize}
+\end{corollary}
+
 \section{Uniform Continuity}
 %% AC03 pp. 51-54
 
