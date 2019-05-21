@@ -144,14 +144,14 @@ If $f$ has limit $y_0$ at $x_0$ then $y_0$ is unique, hence we can denote: \begi
 % p. 35
 
 \begin{fact} \
-\begin{itemize}
-\item[(1)] $f: D \left(\subseteq X\right) \ra Y$, metric spaces, $x_0 \in X$. % Domain of f labelled as X in notes, should be D for isolated pts. etc. to make sense
+\begin{enumerate}
+\item $f: D \left(\subseteq X\right) \ra Y$, metric spaces, $x_0 \in X$. % Domain of f labelled as X in notes, should be D for isolated pts. etc. to make sense
     \begin{itemize}
     \item[(i)] if $x_0$ is isolated in $D$ then $f$ is continuous at $x_0$
     \item[(ii)] if $x_0$ is an accum. point for $D$ then $f$ is cont. at $x_0$ iff \begin{equation*}\lim_{x \ra x_0} f(x) = f(x_0).\end{equation*}
     \end{itemize}
-\item[(2)] % crossed out
-\item[(3)] $f: D \ra Y$ function, $x_0 \in D$ accumulation point and $y_0 \in Y$. Then
+% \item % crossed out
+\item $f: D \ra Y$ function, $x_0 \in D$ accumulation point and $y_0 \in Y$. Then
     \begin{align}
     \lim_{x \ra x_0} f(x) = y_0 \ \Lra \ \nonumber
     & \forall (x_n)_{n \geq 1} \textit{ with all } x_n \in D \\ \nonumber
@@ -159,7 +159,6 @@ If $f$ has limit $y_0$ at $x_0$ then $y_0$ is unique, hence we can denote: \begi
     & \textit{and } \lim_{n \ra \infty} x_n = x_0 \\ \nonumber
     & \textit{we have } \lim_{n \ra \infty} f(x_n) = y_0.
     \end{align}
-    \end{itemize}
     
     \begin{proof}
     
@@ -185,7 +184,7 @@ If $f$ has limit $y_0$ at $x_0$ then $y_0$ is unique, hence we can denote: \begi
     \end{itemize}
     \end{proof}
 
-\item[(4)] (Sequential Characterization of Continuity) Let $f: X \ra Y$ function and $x_0 \in X$. 
+\item (Sequential Characterization of Continuity) Let $f: X \ra Y$ function and $x_0 \in X$. 
 \begin{align}
 \textit{Then } f \textit{ is continuous at } x_0 \Lra \ \nonumber
 & \forall (x_n)_{n \geq 1} \textit{ seq. in } X \\ \nonumber
@@ -195,7 +194,7 @@ If $f$ has limit $y_0$ at $x_0$ then $y_0$ is unique, hence we can denote: \begi
 
 % p. 37
 
-\item[(5)] (Composition of Functions) Let $\underset{\rho}X \overset{f}\ra \underset{\eta}Y \overset{g}\ra \underset{\theta}Z$ functions between metric spaces.
+\item (Composition of Functions) Let $\underset{\rho}X \overset{f}\ra \underset{\eta}Y \overset{g}\ra \underset{\theta}Z$ functions between metric spaces.
     \begin{itemize}
     \item[(i)] % crossed out
     \item[(ii)] \begin{align}
@@ -207,7 +206,7 @@ If $f$ has limit $y_0$ at $x_0$ then $y_0$ is unique, hence we can denote: \begi
     Then $g \circ f$ is continuous at $x_0$.
     \end{itemize}
 
-\item[(6)] (Functions Between Euclidean Spaces) Let $D \subseteq \RR^p$ and $f: D \ra \RR^q$ be a function, hence $f(x) = \left(f_1(x), \ldots, f_q(x)\right)$, $\forall x \in D$ where  $f_j : D \ra \RR$ function $\forall j = 1, \ldots, q$.
+\item (Functions Between Euclidean Spaces) Let $D \subseteq \RR^p$ and $f: D \ra \RR^q$ be a function, hence $f(x) = \left(f_1(x), \ldots, f_q(x)\right)$, $\forall x \in D$ where  $f_j : D \ra \RR$ function $\forall j = 1, \ldots, q$.
     \begin{itemize}
     \item[(i)] Let $x_0 \in D^\prime$, i.e. $x_0$ is an accumulation point for $D$ and \\ $y^{(0)} = \left(y^{(0)}_1, \ldots, y^{(0)}_q\right) \in \RR^q$. Then
     \begin{equation*}
@@ -246,13 +245,14 @@ If $f$ has limit $y_0$ at $x_0$ then $y_0$ is unique, hence we can denote: \begi
     \end{itemize}
     \end{proof}
 
+\end{enumerate}
 \end{fact}
 
 % p. 39
 
 \begin{example}
-\begin{itemize}
-\item[(1)] $f: \RR^2 \ra \RR$
+\begin{enumerate}
+\item $f: \RR^2 \ra \RR$
 \begin{equation*}
 f(x,y) =\left\{\begin{array}{ll} \frac{xy}{x^2+y^2}, & (x,y) \neq (0,0) \\ 0, & (x,y) = (0,0) \end{array} \right.
 \end{equation*}
@@ -269,7 +269,7 @@ y = 0, \ x \ra 0 \Ra & f(x,0) = 0 \ra 0 \\ \nonumber
 x = y \ra 0 \Ra & f(x,y) = \frac{1}{2} \ra \frac{1}{2}
 \end{align}
 
-\item[(2)] $f: \RR^2 \ra \RR$
+\item $f: \RR^2 \ra \RR$
 \begin{equation*}
 f(x,y) =\left\{\begin{array}{ll} \frac{xy}{\sqrt{x^2+y^2}}, & (x,y) \neq (0,0) \\ 0, & (x,y) = (0,0) \end{array} \right.
 \end{equation*}
@@ -284,7 +284,7 @@ $\bullet$ at $(0,0)$
 |f(x,y)| = \frac{|xy|}{\sqrt{x^2+y^2}} \leq \frac{\sqrt{x^2+y^2}}{2} = \frac{\|(x,y)\|_2}{2}
 \end{equation*}
 
-\end{itemize}
+\end{enumerate}
 \end{example}
 
 % p. 40
@@ -298,27 +298,27 @@ $\bullet$ A curve with endpoints $x$ and $y$ is called \emph{closed} if $x = y$.
 \end{definition}
 
 \begin{example}
-\begin{itemize}
-\item[(1)] $\gamma(t) = \left(\cos t, \sin t\right), \gamma: [0, 2\pi] \ra \RR^2$
+\begin{enumerate}
+\item $\gamma(t) = \left(\cos t, \sin t\right), \gamma: [0, 2\pi] \ra \RR^2$
 
 $\gamma(0) = \gamma(2\pi)$ so $\gamma$ is a closed curve.
 
 % plot unit circle
 
-\item[(2)] $\gamma(t) = \left(t^2, t^3 \right), \gamma: [0, 1] \ra \RR^2$
+\item $\gamma(t) = \left(t^2, t^3 \right), \gamma: [0, 1] \ra \RR^2$
 
 $\gamma(0) = (0,0)$  $\gamma(1) = (1,1)$ a curve with endpoints but not closed.
 
 % plot curve
 
-\item[(3)] $\gamma(t) = \left(t \cos t, t \sin t, t \right), \gamma: \RR \ra \RR^3$
+\item $\gamma(t) = \left(t \cos t, t \sin t, t \right), \gamma: \RR \ra \RR^3$
 
 is a curve with no endpoints
 
 a \emph{spiral} inside $\left\{(x,y,z) | x^2 + y^2 = |z|\right\}$ a \emph{cone}
 
 % plot spiral
-\end{itemize}
+\end{enumerate}
 \end{example}
 
 % AC03 p. 41
@@ -329,8 +329,8 @@ $D$ open, nonempty in $\RR^2$, $D \subseteq A \subseteq \bar D$.
 \end{definition}
 
 \begin{example}
-\begin{itemize}
-\item[(1)] \emph{2-dimensional sphere in} $\RR^3$
+\begin{enumerate}
+\item \emph{2-dimensional sphere in} $\RR^3$
 \begin{equation*}F : \left[0, 2\pi\right) \times \left[-\frac{\pi}{2}, \frac{\pi}{2}\right] \ra \RR^3 \end{equation*}
 \begin{equation*}F(\theta, \phi) = (\cos \theta \cos \phi, \sin \theta \cos \phi, \sin \phi) \end{equation*}
 
@@ -338,7 +338,7 @@ $D$ open, nonempty in $\RR^2$, $D \subseteq A \subseteq \bar D$.
 
 % p. 42
 
-\item[(2)]
+\item
 
 \begin{equation*}G : B \ra \RR^3 \end{equation*}
 \begin{equation*}G(x,y,z) = \left(x, y, \sqrt{1-x^2-y^2}\right) \end{equation*}
@@ -346,7 +346,7 @@ $D$ open, nonempty in $\RR^2$, $D \subseteq A \subseteq \bar D$.
 
 % plot half-sphere
 
-\end{itemize}
+\end{enumerate}
 \end{example}
 
 \section{Continuity and Topology}
@@ -505,15 +505,15 @@ Thus, $f^{-1}(U)$ and $f^{-1}(V)$ separate C, contradiction!
 \end{proof}
 
 \begin{corollary} % Consequences
-\begin{itemize}
-\item[(1)] Let $f: (X; \rho) \ra \RR$ continuous, $C$ connected in $X$. Then $f(C)$ is an interval.
-\item[(2)] Let $I$ be an interval in $\RR$ and $\gamma: I \ra \RR^d$ continuous (a curve). Then $\gamma(I)$ is connected.
+\begin{enumerate}
+\item Let $f: (X; \rho) \ra \RR$ continuous, $C$ connected in $X$. Then $f(C)$ is an interval.
+\item Let $I$ be an interval in $\RR$ and $\gamma: I \ra \RR^d$ continuous (a curve). Then $\gamma(I)$ is connected.
 
 \begin{definition}
 A subset $S \subseteq (X; \rho)$ is called \emph{pathwise connected} if for all $a, b \in S$ there exists a (continuous) path $\gamma: [0,1] \ra S$ such that $a = \gamma(0)$ and $b = \gamma(1)$.
 \end{definition}
 
-\item[(3)] If $S$ is pathwise connected, then it is connected.
+\item If $S$ is pathwise connected, then it is connected.
 
 \begin{proof}
 Assume $S$ is not connected, let $U$, $V$ open in $X$ and separating $S$. Then there exist $a \in S \cap U$ and $b \in S \cap V$.
@@ -529,7 +529,7 @@ S = \{(0,y) | -1 \leq y \leq 1 \} \cap \{ (x, \sin \frac{1}{x}) | -\frac{1}{\pi}
 % missing: graph of set
 \end{example}
 
-\item[(4)] Assume that $D$ is open in $\RR^d$. Then $D$ is connected iff $D$ is pathwise connected.
+\item Assume that $D$ is open in $\RR^d$. Then $D$ is connected iff $D$ is pathwise connected.
 
 \begin{proof}
 
@@ -544,7 +544,7 @@ S = \{(0,y) | -1 \leq y \leq 1 \} \cap \{ (x, \sin \frac{1}{x}) | -\frac{1}{\pi}
 \end{itemize}
 \end{itemize}
 \end{proof}
-\end{itemize}
+\end{enumerate}
 \end{corollary}
 
 \section{Uniform Continuity}
@@ -580,10 +580,10 @@ Then
 
 \begin{theorem}
 Let $(X; \rho)$ be a compact metric space, $(Y; \eta)$ be a complete metric space, $\emptyset \neq D \subseteq X$ and $f: D \ra Y$ a function. TFAE:
-\begin{itemize}
+\begin{enumerate}
 \item[(i)] $f$ is uniformly continuous on $D$
 \item[(ii)] $\exists \bar f: \bar D \ra Y$ such that $\bar f|_D = f$ and $\bar f$ is continuous on $\bar D$.
-\end{itemize}
+\end{enumerate}
 \end{theorem}
 
 \begin{proof}
@@ -638,6 +638,174 @@ hence $\bar f(\bar x_n) \xrightarrow[n]\eta \bar f(\bar x)$.
 
 \section{Sequences of Functions}
 %% AC03 pp. 55-59
+
+Let $X$ be a nonempty set and $(Y; \eta)$ a vector space. We consider sequences $(f_n)_{n \geq 1}$ of functions
+\begin{equation*} f_n: X \ra Y, \ n \in \NN. \end{equation*}
+
+\begin{definition}
+% We have not figured out a way to make the item start on the line below the definition, instead of starting on the same line
+\begin{itemize}
+\item[$\bullet$] $(f_n)_{n \geq 1}$ \emph{converges pointwise} to $f: X \ra Y$ if 
+
+$\forall x \in X$ $\forall \epsilon > 0$ $\exists N \in \NN$ such that $\forall n \geq N, \eta(f(x),f_n(x)) < \epsilon$,
+
+i.e. $\forall x \in X$, $(f_n(x))_{n \geq 1}$ converges to $f(x)$ in $Y$ with respect to $\eta$.
+
+\item[$\bullet$] $(f_n)_{n \geq 1}$ \emph{converges uniformly} to $f: X \ra Y$ if 
+
+$\forall \epsilon > 0$ $\exists N \in \NN$ such that $\forall n \geq N, \forall x \in X, \eta(f(x),f_n(x)) < \epsilon$
+\end{itemize}
+\end{definition}
+
+\begin{fact}
+\begin{enumerate}
+\item If there exists $(\alpha_n)_{n \geq 1}$ such that $\alpha_n \geq 0 \ \forall n \in \NN$ and $\alpha_n \xrightarrow[n]{} 0$ and $\eta(f(x), f_n(x)) \leq \alpha_n \ \forall n \in \NN$ and $\forall x \in X$, then $f_n \xrightarrow[n]{\textup{unif.}} f$.
+
+\item If $(X; \rho)$ and $(Y; \eta)$ are metric spaces and functions $f_n: X \ra Y$ continuous for all $n \in \NN$, $f: X \ra Y$ such that $f_n \xrightarrow[n]{\textup{unif.}} f$, then $f$ is continuous on $X$.
+
+\begin{proof}
+Let $x_0 \in X$ and $\epsilon > 0$. There exists $N \in \NN$ such that for all $n \geq N$ and all $x \in X$
+\begin{equation*} \eta(f_n(x),f(x)) < \frac{\epsilon}{3}. \end{equation*}
+
+% p. 56
+
+$f_N$ is continuous at $x_0$, so there exists $\delta > 0$ such that for all $x \in X$, $\rho(x, x_0) < \delta$ implies $\eta(f_N(x), f_N(x_0)) < \frac{\epsilon}{3}$.
+
+Then for all $x \in X$, if $\rho(x, x_0) < \delta$ then
+
+\begin{align*} 
+\eta(f(x), f(x_0)) & \leq \eta(f(x), f_N(x)) + \eta(f_N(x), f_N(x_0)) + \eta(f_N(x_0), f(x_0)) \\
+& < \frac{\epsilon}{3} + \frac{\epsilon}{3} + \frac{\epsilon}{3} = \epsilon.
+\end{align*}
+\end{proof}
+\end{enumerate}
+\end{fact}
+
+\begin{example}
+\begin{enumerate}
+\item $f_n: \underset{\subseteq \RR^d}{\overline{B_1(0)}} \ra \RR$, $f_n(x) = \|x\|^n_2$,
+\begin{equation*}
+f(x)=\left\{\begin{array}{ll}{0,} & {x \in B_1(0)} \\ {1,} & {x \in \partial B_1(0)}\end{array}\right.
+\end{equation*}
+Then $f_n \xrightarrow[n]{\textup{pointwise}} f$ but not uniformly.
+
+\item $B_1(0) \in \RR^2$, $f_n : B_1(0) \ra \RR^2$, $f : B_1(0) \ra \RR^2$
+\begin{equation*}
+f_n(x_1, x_2) = \left(\frac{x_1^2-nx_2^2}{1+nx_2^2}, \frac{nx_1}{1+nx_1^2}\right)
+\end{equation*}
+\begin{equation*}
+f(x)=\left\{\begin{array}{ll}
+{(-1, \frac{1}{x_1}),} & {x_1 \neq 0, x_2 \neq 0} \\ 
+{(-1, 0,} & {x_1 = 0, x_2 \neq 0} \\ 
+{(x_1^2, \frac{1}{x_1}),} & {x_1 \neq 0, x_2 = 0} \\ 
+{(0,0),} & {x_1 = 0, x_2 = 0} 
+\end{array}\right.
+\end{equation*}
+
+$f_n \xrightarrow[n]{\textup{pointwise}} f$ but not uniformly.
+\end{enumerate}
+\end{example}
+
+% p. 57
+
+\begin{definition}
+$f_n: \underset{\textup{set}}X \ra \underset{\eta}Y$, $\forall n \in \NN$.
+
+$(f_n)_{n \geq 1}$ is \emph{uniformly Cauchy} if for all $\epsilon > 0$ there exists $N \in \NN$ such that for all $m, n \geq N$ we have 
+\begin{equation*}\eta(f_n(x), f_m(x)) < \epsilon\end{equation*}.
+\end{definition}
+
+\begin{fact}
+\begin{enumerate}
+\item If $f_n \xrightarrow[n]{\textup{unif.}} f$ then $(f_n)_{n \geq 1}$ is uniformly Cauchy.
+
+\item If $(Y; \eta)$ is complete and $(f_n)_{n \geq 1}$ is uniformly Cauchy then $\exists f: X \ra Y$ such that $f_n \xrightarrow[n]{\textup{unif.}} f$.
+
+\begin{proof}
+Let $\epsilon > 0$. There exists $N \in \NN$ such that for any $m, n \geq N$, $x \in X$ 
+\begin{equation}
+\eta(f_m(x), f_n(x)) < \frac{\epsilon}{2} \label{cauchy} \tag{$*$}
+\end{equation}
+
+Then, for each $x \in X$ $(f_n(x))_{n \geq 1}$ is Cauchy in $Y$ complete, hence there exists $f(x) \in Y$ such that $f_n(x) \xrightarrow[n]{} f(x)$.
+
+Due to the uniqueness of the limit in $Y$, there exists a function $f: X \ra Y$ such that $f_n \xrightarrow[n]{\textup{pointwise}} f$.
+
+Letting $m \ra +\infty$ in \eqref{cauchy}, for all $n \geq N$, $x \in X$
+\begin{equation*}
+\eta(f(x), f_n(x)) \leq \frac{\epsilon}{2} < \epsilon
+\end{equation*}
+
+Hence $f_n \xrightarrow[n]{\textup{unif.}} f$.
+\end{proof}
+\end{enumerate}
+\end{fact}
+
+\begin{remark}
+For all $z \in Y$ the map $Y \ni y \mapsto \eta(y, z) \in \RR$ is continuous.
+\end{remark}
+
+% p. 58
+
+\begin{definition}
+Let $X \neq \emptyset$ and $(V, \|\cdot\|)$ a normed space. 
+\begin{equation*}
+\cB(X; V) := \left\{f : X \ra V | f \textup{bounded function} \right\}
+\end{equation*}
+For all $f \in \cB(X; V)$, $\|f\|_X := \underset{x \in X}\sup \|f(x)\|$.
+\end{definition}
+
+\begin{fact}
+\begin{enumerate}
+\item $\cB(X; V)$ is a vector space. $\|\cdot\|_X$ is a norm, called the \emph{sup norm} on $X$.
+\item If $(V; \|\cdot\|)$ is complete, then the normed space $(\cB(X; V); \|\cdot\|_X)$ is complete.
+\begin{proof}
+Let $(f_n)_{n \geq 1}$ be a Cauchy sequence in $\cB(X; V)$ with respect to the norm $\|\cdot\|_X$. Hence:
+\begin{equation*}
+\forall \epsilon > 0 \ \exists N \in \NN \textup{ such that } \forall m, n \geq N, \|f_m - f_n\|_X < \frac{\epsilon}{2}.
+\end{equation*}
+\begin{equation}
+\textup{hence } \forall x \in X \quad \|f_m(x) - f_n(x)\| \leq \|f_m - f_n\|_X < \frac{\epsilon}{2} \label{ptcauchy} \tag{$*$}
+\end{equation}
+
+Then for all $x \in X$ the sequence $(f_n(x))_{n \geq 1}$ is Cauchy in V complete, hence there exists $f(x) \in V$ such that
+\begin{equation*} \|f_n(x) - f(x)\| \xrightarrow[n \ra \infty]{} 0 \end{equation*}
+
+Then $X \ni x \mapsto f(x) \in V$ is a function. % exercise
+
+$\bullet$ $f \in \cB(X; V)$ and $\|f_n - f\|_X \xrightarrow[n]{} 0$.
+
+% p. 59
+
+$\bullet$ For all $x \in X$ let $n \ra \infty$ in \eqref{ptcauchy} hence
+\begin{equation}
+\|f(x) - f_n(x)\| \leq \frac{\epsilon}{2} < \epsilon \label{ptconv} \tag{$**$}
+\end{equation}
+hence
+\begin{equation}
+\sup_{x \in X} \|f(x) - f_n(x)\| \leq \frac{\epsilon}{2} < \epsilon \label{supconv} \tag{$***$}
+\end{equation}
+
+Also for all $x \in X$, letting $n = N$ in \eqref{ptconv} we have
+\begin{equation*}
+\|f(x)\| \leq \|f(x) - f_N(x)\| + \|f_N(x)\| \leq \frac{\epsilon}{2} + \|f_N\|_X < +\infty
+\end{equation*}
+hence $f \in \cB(X; V)$.
+
+On the other hand, from \eqref{supconv}, for all $n \geq N$ $\|f - f_n\|_X < \epsilon$,
+
+hence $f_n \xrightarrow[n]{\|\cdot\|_X} f$.
+\end{proof}
+
+\item Let $(X; \rho)$ be a compact metric space, $(V; \|\cdot\|)$ Banach space and
+\begin{equation*} \cC(X; V) := \left\{f: X \ra V | f \textup{ continuous} \right\}. \end{equation*}
+Then:
+\begin{itemize}
+\item[$\bullet$] $\cC(X; V) \subseteq \cB(X; V)$ as a vector subspace
+\item[$\bullet$] $(\cC(X; V); \|\cdot\|_X)$ is a complete normed space.
+\end{itemize}
+\end{enumerate}
+\end{fact}
 
 \section{Series of Functions}
 %% AC03 p. 60
