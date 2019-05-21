@@ -531,8 +531,7 @@ S = \{(0,y) | -1 \leq y \leq 1 \} \cap \{ (x, \sin \frac{1}{x}) | -\frac{1}{\pi}
 
 \item Assume that $D$ is open in $\RR^d$. Then $D$ is connected iff $D$ is pathwise connected.
 
-\begin{proof}
-
+\begin{proof} \
 \begin{itemize}
 \item["$\La$"] Holds in general.
 \item["$\Ra$"] On $D$ we define a relation: $x \overset{p}\sim y$ if $\exists \gamma: [0,1] \ra D$ continuous such that $\gamma(0) = x$ and $\gamma(1) = y$.
@@ -586,7 +585,7 @@ Let $(X; \rho)$ be a compact metric space, $(Y; \eta)$ be a complete metric spac
 \end{enumerate}
 \end{theorem}
 
-\begin{proof}
+\begin{proof} \
 \begin{itemize}
 \item[(ii) $\Ra$ (i)] $\bar D$ closed in $X$ compact hence $\bar D$ is compact $\Ra$ $\bar f$ unif. cont. on $\bar D$ $\Ra$ $f = \bar f|_D$ unif. cont. on D.
 \item[(i) $\Ra$ (ii)] Assume that $f$ is uniformly continuous.
@@ -642,8 +641,7 @@ hence $\bar f(\bar x_n) \xrightarrow[n]\eta \bar f(\bar x)$.
 Let $X$ be a nonempty set and $(Y; \eta)$ a vector space. We consider sequences $(f_n)_{n \geq 1}$ of functions
 \begin{equation*} f_n: X \ra Y, \ n \in \NN. \end{equation*}
 
-\begin{definition}
-% We have not figured out a way to make the item start on the line below the definition, instead of starting on the same line
+\begin{definition} \
 \begin{itemize}
 \item[$\bullet$] $(f_n)_{n \geq 1}$ \emph{converges pointwise} to $f: X \ra Y$ if 
 
@@ -657,7 +655,7 @@ $\forall \epsilon > 0$ $\exists N \in \NN$ such that $\forall n \geq N, \forall 
 \end{itemize}
 \end{definition}
 
-\begin{fact}
+\begin{fact} \
 \begin{enumerate}
 \item If there exists $(\alpha_n)_{n \geq 1}$ such that $\alpha_n \geq 0 \ \forall n \in \NN$ and $\alpha_n \xrightarrow[n]{} 0$ and $\eta(f(x), f_n(x)) \leq \alpha_n \ \forall n \in \NN$ and $\forall x \in X$, then $f_n \xrightarrow[n]{\textup{unif.}} f$.
 
@@ -681,7 +679,7 @@ Then for all $x \in X$, if $\rho(x, x_0) < \delta$ then
 \end{enumerate}
 \end{fact}
 
-\begin{example}
+\begin{example} \
 \begin{enumerate}
 \item $f_n: \underset{\subseteq \RR^d}{\overline{B_1(0)}} \ra \RR$, $f_n(x) = \|x\|^n_2$,
 \begin{equation*}
@@ -715,7 +713,7 @@ $(f_n)_{n \geq 1}$ is \emph{uniformly Cauchy} if for all $\epsilon > 0$ there ex
 \begin{equation*}\eta(f_n(x), f_m(x)) < \epsilon\end{equation*}.
 \end{definition}
 
-\begin{fact}
+\begin{fact} \
 \begin{enumerate}
 \item If $f_n \xrightarrow[n]{\textup{unif.}} f$ then $(f_n)_{n \geq 1}$ is uniformly Cauchy.
 
@@ -755,7 +753,7 @@ Let $X \neq \emptyset$ and $(V, \|\cdot\|)$ a normed space.
 For all $f \in \cB(X; V)$, $\|f\|_X := \underset{x \in X}\sup \|f(x)\|$.
 \end{definition}
 
-\begin{fact}
+\begin{fact} \
 \begin{enumerate}
 \item $\cB(X; V)$ is a vector space. $\|\cdot\|_X$ is a norm, called the \emph{sup norm} on $X$.
 \item If $(V; \|\cdot\|)$ is complete, then the normed space $(\cB(X; V); \|\cdot\|_X)$ is complete.
@@ -812,7 +810,7 @@ Then:
 
 Let $\emptyset \neq X$ be a set and $(V, \|\cdot\|_V)$ be a normed space and $(f_n)_{n \geq 1}$ a sequence of functions $f_n : X \ra V$.
 
-\begin{definition}
+\begin{definition} \
 \begin{itemize}
 \item[$\bullet$] A formal sum $\sum_{n=1}^\infty f_n$ is called a \emph{series of functions} on $X$ and valued in $V$.
 \begin{equation*} \forall n \in \NN \quad s_n = \sum_{k=1}^n f_n, \end{equation*}
