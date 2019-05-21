@@ -810,4 +810,25 @@ Then:
 \section{Series of Functions}
 %% AC03 p. 60
 
+Let $\emptyset \neq X$ be a set and $(V, \|\cdot\|_V)$ be a normed space and $(f_n)_{n \geq 1}$ a sequence of functions $f_n : X \ra V$.
+
+\begin{definition}
+\begin{itemize}
+\item[$\bullet$] A formal sum $\sum_{n=1}^\infty f_n$ is called a \emph{series of functions} on $X$ and valued in $V$.
+\begin{equation*} \forall n \in \NN \quad s_n = \sum_{k=1}^n f_n, \end{equation*}
+$(s_n)_{n=1}^\infty$ is the sequence of partial sums of the series $\sum_{n=1}^\infty f_n$.
+\item[$\bullet$] The series $\sum_{n=1}^\infty f_n$ \emph{pointwise converges} if the sequence $(s_n)_{n=1}^\infty$ converges pointwise to a function $f: X \ra V$.
+\item[$\bullet$] The series $\sum_{n=1}^\infty f_n$ \emph{uniformly converges} if the sequence $(s_n)_{n=1}^\infty$ converges uniformly to a function $f: X \ra V$.
+\item[$\bullet$] The series $\sum_{n=1}^\infty f_n$ \emph{absolutely} converges if $\sum_{n=1}^\infty \|f_n\|_V$ converges. This can be pointwise or uniformly.
+\end{itemize}
+\end{definition}
+
+\begin{fact} 
+Assume that the normed space $(V; \|\cdot\|)$ is complete.
+\begin{enumerate}
+\item If $\sum_{n=1}^\infty f_n$ absolutely converges then it converges.
+\item If $\|f_n(x)\| \leq \alpha_n$ for all $x \in X, n \in \NN$, and $\sum_{n=1}^\infty \alpha_n < +\infty$ then $\sum_{n=1}^\infty f_n$ converges absolutely and uniformly.
+\end{enumerate}
+\end{fact}
+
 \end{document}
